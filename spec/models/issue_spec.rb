@@ -13,6 +13,7 @@ describe Issue do
     it { should validate_presence_of(:author_id) }
     it { should validate_presence_of(:project_id) }
     it { should validate_presence_of(:assignee_id) }
+    it { should validate_numericality_of(:spend_time) }
   end
 
   describe "Scope" do
@@ -24,6 +25,26 @@ describe Issue do
                       :author => Factory(:user),
                       :assignee => Factory(:user),
                       :project => Factory.create(:project)).should be_valid }
+
+  describe "Spend time" do
+    let (:issue) {
+        Factory.create(:issue,
+                       :author => Factory(:user),
+                       :assignee => Factory(:user),
+                       :project => Factory.create(:project))
+    }
+
+    it 'should not be valid spend time' do
+      issue.spend_time = -1
+      issue.should_not be_valid
+    end
+
+    it 'should be valid spend time' do
+      issue.spend_time = 1
+      issue.should be_valid
+    end
+  end
+
 
   describe "plus 1" do
     let(:project) { Factory(:project) }

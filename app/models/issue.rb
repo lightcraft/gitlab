@@ -30,7 +30,8 @@ class Issue < ActiveRecord::Base
             :length => {:within => 0..2000}
 
   validates_numericality_of :spend_time,
-                            :greater_than => 0
+                            :greater_than_or_equal_to => 0,
+                            :allow_nil => true
 
 
   scope :critical, where(:critical => true)
