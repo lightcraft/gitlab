@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120413135904) do
+ActiveRecord::Schema.define(:version => 20120617084715) do
 
   create_table "events", :force => true do |t|
     t.string   "target_type"
@@ -30,14 +30,15 @@ ActiveRecord::Schema.define(:version => 20120413135904) do
     t.integer  "assignee_id"
     t.integer  "author_id"
     t.integer  "project_id"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.boolean  "closed",       :default => false, :null => false
-    t.integer  "position",     :default => 0
-    t.boolean  "critical",     :default => false, :null => false
+    t.datetime "created_at",                                                     :null => false
+    t.datetime "updated_at",                                                     :null => false
+    t.boolean  "closed",                                      :default => false, :null => false
+    t.integer  "position",                                    :default => 0
+    t.boolean  "critical",                                    :default => false, :null => false
     t.string   "branch_name"
     t.text     "description"
     t.integer  "milestone_id"
+    t.decimal  "spend_time",   :precision => 10, :scale => 0, :default => 0,     :null => false
   end
 
   add_index "issues", ["project_id"], :name => "index_issues_on_project_id"
@@ -62,8 +63,8 @@ ActiveRecord::Schema.define(:version => 20120413135904) do
     t.boolean  "closed",                              :default => false, :null => false
     t.datetime "created_at",                                             :null => false
     t.datetime "updated_at",                                             :null => false
-    t.text     "st_commits",    :limit => 4294967295
-    t.text     "st_diffs",      :limit => 4294967295
+    t.text     "st_commits",    :limit => 2147483647
+    t.text     "st_diffs",      :limit => 2147483647
     t.boolean  "merged",                              :default => false, :null => false
     t.integer  "state",                               :default => 1,     :null => false
   end

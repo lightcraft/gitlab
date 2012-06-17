@@ -13,6 +13,10 @@ class Milestone < ActiveRecord::Base
     User.where(:id => issues.map(&:assignee_id))
   end
 
+  def spend_time
+    self.issues.sum(:spend_time)
+  end
+
   def percent_complete
     @percent_complete ||= begin
                             total_i = self.issues.count

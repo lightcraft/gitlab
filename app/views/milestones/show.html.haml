@@ -31,6 +31,9 @@
         #{@milestone.issues.opened.count} open
         &ndash;
         #{@milestone.issues.closed.count} closed
+      Spend Time:
+      %small
+        #{@milistone.spend_time} hours
     .progress
 
   - if @milestone.description.present?

@@ -24,17 +24,21 @@ class Issue < ActiveRecord::Base
 
   validates :title,
             :presence => true,
-            :length   => { :within => 0..255 }
-            
+            :length => {:within => 0..255}
+
   validates :description,
-            :length   => { :within => 0..2000 }
+            :length => {:within => 0..2000}
+
+  validates_numericality_of :spend_time,
+                            :greater_than => 0
+
 
   scope :critical, where(:critical => true)
   scope :non_critical, where(:critical => false)
 
   scope :opened, where(:closed => false)
   scope :closed, where(:closed => true)
-  scope :assigned, lambda { |u| where(:assignee_id => u.id)}
+  scope :assigned, lambda { |u| where(:assignee_id => u.id) }
 
   acts_as_list
 

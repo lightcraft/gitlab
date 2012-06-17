@@ -29,6 +29,9 @@
           .clearfix
             = f.label :closed
             .input= f.check_box :closed
+          .clearfix
+            = f.label :spend_time
+            .input= f.text_field :spend_time, :maxlength => 4
         .clearfix
           = f.label :description, "Issue Details"
           .input
