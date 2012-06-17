@@ -3,13 +3,13 @@
   = render "layouts/head"
   %body{:class => "#{app_theme} profile"}
     = render "layouts/flash"
-    = render "layouts/head_panel", :title => "Profile"
+    = render "layouts/head_panel", :title => t('.profile')
     .container
       %nav.main_menu
-        = link_to "Profile", profile_path, :class => "home #{current_page?(:controller => "profile", :action => :show) ? "current" : nil}"
-        = link_to "Password", profile_password_path,  :class => current_page?(:controller => "profile", :action => :password) ? "current" : nil
-        = link_to "Token", profile_token_path,  :class => current_page?(:controller => "profile", :action => :token) ? "current" : nil
-        = link_to "Design", profile_design_path, :class => current_page?(:controller => "profile", :action => :design) ? "current" : nil
+        = link_to t('.profile'), profile_path, :class => "home #{current_page?(:controller => "profile", :action => :show) ? "current" : nil}"
+        = link_to t('.password'), profile_password_path,  :class => current_page?(:controller => "profile", :action => :password) ? "current" : nil
+        = link_to t('.token'), profile_token_path,  :class => current_page?(:controller => "profile", :action => :token) ? "current" : nil
+        = link_to t('.design'), profile_design_path, :class => current_page?(:controller => "profile", :action => :design) ? "current" : nil
         = link_to keys_path,  :class => controller.controller_name == "keys" ? "current" : nil do
           SSH Keys
       .content

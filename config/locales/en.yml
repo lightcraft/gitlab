@@ -2,9 +2,50 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
   errors:
     messages:
       wrong_size: "is the wrong size (should be %{file_size})"
       size_too_small: "is too small (should be at least %{file_size})"
       size_too_big: "is too big (should be at most %{file_size})"
+
+  layouts:
+    app_menu:
+      home: 'Home'
+      issues: 'Issues'
+      requests: 'Requests'
+      search: 'Search'
+      help: 'Help'
+    head_panel:
+      admin: 'Admin'
+      project: 'Project'
+      my_profile: 'My profile'
+      logout: 'Logout'
+      search_holder: 'Search'
+      admin_area_title: 'Admin area'
+      new_project_title: 'Create New Project'
+      home_title: 'Home'
+    project_menu:
+      files: 'Files'
+      commits: 'Commits'
+      network: 'Network'
+      issues: 'Issues'
+      merge_requests: 'Merge Requests'
+      wall: 'Wall'
+      wiki: 'Wiki'
+      project: 'Project'
+    admin:
+      admin_area: 'Admin area'
+      stats: 'Stats'
+      projects: 'Projects'
+      users: 'Users'
+      emails: 'Emails'
+      resque: 'Resque'
+    application:
+      dashboard: 'Dashboard'
+    notify:
+      msg: "You're receiving this newsletter because you are in project team."
+    profile:
+      profile: 'Profile'
+      password: 'Password'
+      token: 'Token'
+      design: 'Design'

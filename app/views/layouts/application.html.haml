@@ -3,7 +3,7 @@
   = render "layouts/head"
   %body{:class => "#{app_theme} application"}
     = render "layouts/flash"
-    = render "layouts/head_panel", :title => "Dashboard"
+    = render "layouts/head_panel", :title => t('.dashboard')
     .container
       = render :partial => "layouts/app_menu"
       .content
