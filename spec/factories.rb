@@ -34,6 +34,7 @@ Factory.add(:issue, Issue) do |obj|
   obj.title = Faker::Lorem.sentence
   obj.author = Factory :user
   obj.assignee = Factory :user
+  obj.spend_time = 3
 end
 
 Factory.add(:merge_request, MergeRequest) do |obj|

@@ -27,6 +27,7 @@ describe Milestone do
     it do 
       issue.update_attributes :closed => true
       milestone.percent_complete.should == 100
+      milestone.spend_time.should eq(3)
     end
   end
 
