@@ -48,6 +48,23 @@ en:
      authored_or_assigned: '(authored or assigned to you)'
      merge_requests: '%{count} merge requests'
      nothing: 'Nothing to show here'
+  deploy_keys:
+    form:
+      save: 'Save'
+      cancel: 'Cancel'
+    show:
+      added: 'Added'
+      ago: 'ago'
+      remove: 'Remove'
+    index:
+      alert_message: 'Deploy keys allow read-only access to repository.'
+      add_deploy_key: 'Add Deploy Key'
+      title_new_key: 'New Deploy Key'
+    new:
+      head: 'New Deploy key'
+    show:
+      remove: 'Remove'
+      remove_confirm: 'Are you sure?'
 
   layouts:
     app_menu:

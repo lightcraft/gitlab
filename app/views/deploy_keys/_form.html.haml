@@ -13,6 +13,6 @@
       = f.label :key
       .input= f.text_area :key, :class => "xlarge"
     .actions
-      = f.submit 'Save', :class => "primary btn"
-      = link_to "Cancel", project_deploy_keys_path(@project), :class => "btn"
+      = f.submit t('.save'), :class => "primary btn"
+      = link_to t('.cancel')', project_deploy_keys_path(@project), :class => "btn"
 
