@@ -7,7 +7,37 @@ en:
       wrong_size: "is the wrong size (should be %{file_size})"
       size_too_small: "is too small (should be at least %{file_size})"
       size_too_big: "is too big (should be at most %{file_size})"
-
+  commits:
+    commit:
+      browse_code: 'Browse Code »'
+      diffs:
+        alert:
+         long_commit: 'Warning! Large commit with more then 200 files changed.'
+         reject_diff: 'To prevent performance issue we rejected diff information.'
+         show_diff: 'But if you still want to see diff'
+         click_link: 'click this link'
+        no_preview: 'No preview for this file type'
+      head:
+        commits: 'Commits'
+        compare: 'Compare'
+        branches: 'Branches'
+        tags: 'Tags'
+      test_file:
+        diff: 'Diff suppressed. Click to show'
+        not_title: 'Add note for this line'
+      compare:
+        head: 'Compare View'
+        fill_input: 'Fill input field with commit id like'
+        comapre_tag: 'or branch/tag name like'
+        compare_press: '&amp; press compare button for commits list, code diff.'
+        compare: 'Comapre'
+        commits: 'Commits (%{count})'
+        diff: 'Diff'
+      show:
+        browse_code: 'Browse Code »'
+        authored: 'authored'
+        committed: 'committed'
+        commit: 'commit'
   layouts:
     app_menu:
       home: 'Home'
