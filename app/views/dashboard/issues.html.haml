@@ -1,6 +1,6 @@
 %h3
-  Issues
-  %small (assigned to you)
+  = t('.issues')
+  %small= t('.for_you')
   %small.right #{@issues.total_count} issues
 
 %br
@@ -16,4 +16,4 @@
   = paginate @issues, :theme => "gitlab"
 - else
   %h4.padded
-    %center Nothing to show here
+    %center= t('.nothing')

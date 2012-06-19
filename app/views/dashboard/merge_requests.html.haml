@@ -1,7 +1,7 @@
 %h3
-  Merge Requests
-  %small (authored or assigned to you)
-  %small.right #{@merge_requests.total_count} merge requests
+  = t('.head')
+  %small= t('.authored_or_assigned')
+  %small.right= t('.merge_requests', :count => @merge_requests.total_count )
 
 %br
 - if @merge_requests.any?
@@ -16,4 +16,4 @@
 
 - else
   %h4.padded
-    %center Nothing to show here
+    %center= t('.nothing')

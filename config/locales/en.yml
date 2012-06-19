@@ -38,6 +38,17 @@ en:
         authored: 'authored'
         committed: 'committed'
         commit: 'commit'
+  dashboard:
+    issues:
+      issues: 'Issues'
+      for_you: '(assigned to you)'
+      nothing: 'Nothing to show here'
+    merge_requests:
+     head: 'Merge Requests'
+     authored_or_assigned: '(authored or assigned to you)'
+     merge_requests: '%{count} merge requests'
+     nothing: 'Nothing to show here'
+
   layouts:
     app_menu:
       home: 'Home'
